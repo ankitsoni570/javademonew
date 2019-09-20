@@ -2,6 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/dockerfilejava/dockerfilejava:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/dockerfilejava/dockerfilejava', '.']
 artifacts:
-images: ['gcr.io/gcr.io/dockerfilejava/dockerfilejava:$SHORT_SHA']
+images: ['gcr.io/gcr.io/dockerfilejava/dockerfilejava']
