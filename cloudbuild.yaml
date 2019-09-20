@@ -3,5 +3,5 @@ steps:
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/dockerfilejava/dockerfilejava', '.']
-artifacts:
+
 images: ['gcr.io/gcr.io/dockerfilejava/dockerfilejava']
