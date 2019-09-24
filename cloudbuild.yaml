@@ -4,6 +4,8 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/dockerfilejava/dockerfilejava', '.']
 - name: 'gcr.io/cloud-builders/gcloud'
+  args: ['preview ', 'app', 'deploy', '--stop-previous-version']
+- name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/dockerfilejava/dockerfilejava']
   
 images: ['gcr.io/dockerfilejava/dockerfilejava']
