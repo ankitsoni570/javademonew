@@ -2,10 +2,10 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/dockerfilejava/javaonappengine:latest', '.']
+  args: ['build', '-t', 'gcr.io/infosys-gcp-demo-project/javaonappengine:latest', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/dockerfilejava/javaonappengine']
+  args: ['push', 'gcr.io/infosys-gcp-demo-project/javaonappengine']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/dockerfilejava/javaonappengine:latest']
+  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/infosys-gcp-demo-project/javaonappengine:latest']
   
-images: ['gcr.io/dockerfilejava/javaonappengine:latest']
+images: ['gcr.io/infosys-gcp-demo-project/javaonappengine:latest']
