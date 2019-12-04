@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker built --tag sample .
+docker build --tag sample .
